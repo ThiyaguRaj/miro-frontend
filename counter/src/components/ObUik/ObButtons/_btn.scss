@@ -1,0 +1,98 @@
+@layer components {
+	.btn-base {
+		@apply inline-flex flex-shrink-0 items-center justify-center rounded border border-transparent px-4 py-2 text-sm font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+		box-shadow: 0 1px 1px 0 rgb(22 29 37 / 6%),
+			inset 0 -70px 30px -50px rgb(22 29 37 / 0.2),
+			inset 0 2px 0 0 hsl(0deg 0% 100% / 0.25);
+		&:hover:not(:disabled) {
+			@apply border-opacity-80 bg-opacity-80;
+		}
+		&:not(button) {
+			@apply text-center;
+		}
+		&:disabled {
+			@apply cursor-not-allowed opacity-50 grayscale;
+		}
+	}
+	.normal {
+		@apply border-gray-300 bg-white text-gray-700 shadow-none hover:bg-gray-50;
+		&-light {
+			@apply bg-gray-200 text-gray-700 shadow-none hover:bg-gray-300;
+		}
+		&-light {
+			@apply bg-gray-200 text-gray-700 shadow-none hover:bg-gray-300;
+		}
+		&-outline {
+			@apply border-gray-600 text-gray-700 shadow-none hover:border-transparent hover:bg-gray-200;
+		}
+	}
+	.primary {
+		@apply bg-theme-fill hover:bg-theme-fill/90;
+		&:hover:not(:disabled) {
+			@apply hover:bg-opacity-100;
+		}
+		&-light {
+			@apply bg-primary-200 text-primary-700 shadow-none hover:bg-primary-300;
+		}
+		&-outline {
+			@apply border-theme-stroke text-theme-text shadow-none hover:border-transparent hover:bg-theme-fill hover:bg-opacity-0 hover:text-white;
+		}
+	}
+	.secondary {
+		@apply bg-secondary-600 hover:bg-secondary-700;
+		&-light {
+			@apply bg-secondary-200 text-secondary-700 shadow-none hover:bg-secondary-300;
+		}
+		&-outline {
+			@apply border-secondary-600 text-secondary-700 shadow-none hover:border-transparent hover:bg-secondary-200;
+		}
+	}
+	.success {
+		@apply bg-success-600 hover:bg-success-700;
+		&-light {
+			@apply bg-success-200 text-success-700 shadow-none hover:bg-success-300;
+		}
+
+		&-outline {
+			@apply border-success-600 text-success-700 shadow-none hover:border-transparent hover:bg-success-200;
+		}
+	}
+	.danger {
+		@apply bg-danger-600 hover:bg-danger-700;
+		&-light {
+			@apply bg-danger-200 text-danger-700 shadow-none hover:bg-danger-300;
+		}
+
+		&-outline {
+			@apply border-danger-600 text-danger-700 shadow-none hover:border-transparent hover:bg-danger-200;
+		}
+	}
+	.link {
+		@apply bg-blue-600 hover:bg-blue-700;
+		&-light {
+			@apply bg-blue-200 text-blue-700 shadow-none hover:bg-blue-300;
+		}
+
+		&-outline {
+			@apply border-blue-600 text-blue-700 shadow-none hover:border-transparent hover:bg-blue-200;
+		}
+	}
+	.plain {
+		@apply border-transparent shadow-none;
+	}
+	.circle {
+		@apply rounded-full px-2 leading-none;
+		div {
+			@apply flex h-5 w-5 items-center justify-center;
+		}
+	}
+	.box {
+		@apply px-2 leading-none;
+		div {
+			@apply flex h-5 w-5 items-center justify-center;
+		}
+	}
+	.animation {
+		@apply hover:-translate-y-1;
+	}
+}

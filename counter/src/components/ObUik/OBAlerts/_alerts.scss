@@ -1,0 +1,50 @@
+.alert {
+	@apply relative mb-6 flex items-start rounded-md border p-3 text-sm;
+	&.alert-dismissible {
+		@apply pl-5 pr-16;
+		&:not(.show) {
+			@apply hidden;
+		}
+	}
+	.btn-close {
+		@apply absolute right-4 top-4;
+	}
+}
+
+// Alert Colors
+.alert-primary {
+}
+.alert-secondary {
+	@apply border-gray-300 bg-gray-50 text-gray-600;
+}
+.alert-success {
+	@apply border-success-300 bg-success-50 text-success-600;
+}
+.alert-warning {
+	@apply border-yellow-300 bg-yellow-50 text-yellow-600;
+}
+.alert-danger {
+	@apply border-danger-300 bg-danger-50 text-danger-700;
+	.alert-message {
+		@apply text-danger-500/80;
+	}
+}
+.alert-info {
+	@apply border-blue-300 bg-blue-50 text-blue-600;
+}
+
+// Outline Button
+.alert-outline-primary {
+}
+.alert-text-secondary {
+	@apply border-0 p-0 text-gray-600;
+}
+.alert-text-success {
+	@apply border-0 p-0 text-success-600;
+}
+.alert-text-warning {
+	@apply border-0 p-0 text-yellow-600;
+}
+.alert-text-danger {
+	@apply border-0 p-0 text-red-600;
+}
